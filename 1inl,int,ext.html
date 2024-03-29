@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inline, internal,external css</title>
+
+        <!-- between external and internal , the one which is write after will over ride the properties of other,
+        in this case internal css will be apllied , if we select the same properties for both-->
+        <link rel="stylesheet" href="./style.css" type="text/css" />
+
+        <!-- internal css -->
+        <style>
+            h1 {
+                color: blue;
+                background-color: gray;
+            }
+
+            h2 {
+                color: red;
+                background-color: aqua;
+            }
+
+            h3 {
+                color: rgb(207, 41, 202);
+                background-color: blanchedalmond;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <h1>Heading1</h1>
+        <h2>Heading2</h2>
+        <h3>Heading3</h3>
+        <p>External css</p>
+        <h4>Heading4</h4>
+        <h5>Heading5</h5>
+        <h6>Heading6</h6>
+        <hr>
+
+        <!-- Inline css has priority over External and internal css, so it will overlap the properties of of both -->
+        <p style="color: black; background-color: rgb(216, 113, 113); padding:60px; font-size:25px;">
+            <u>Lorem ipsum</u> dolor sit amet consectetur adipisicing elit.
+            <b>Doloribus tempore</b> dolor debitis beatae <i>voluptatem</i> accusamus
+            nisi nobis at optio, vel, aperiam laudantium officiis quaerat?
+        </p>
+    </body>
+
+</html>

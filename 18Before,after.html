@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After Pseudo Selectors </title>
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-color: black;
+            color: white;
+        }
+
+        .menu-item{
+            display: flex;
+            font-size: 1.7rem;
+            font-family: 'Bree Serif', serif;
+            cursor: pointer;
+        }
+        li{
+            list-style: none;
+            padding: 20px 30px;
+        }
+        li:hover{
+            color: red;
+        }
+
+        section{
+            /* border: 2px solid red; */
+            font-family: 'Bree Serif', serif;
+            margin: 160px 220px;
+            text-align: center;
+            
+
+        }
+        h1{
+            font-size: 3rem;
+        }
+        p{
+            text-align: center;
+            font-size: 1.3rem;
+        }
+
+        .container::before{
+            background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover;
+            content: "";
+            /* to show background write this, and control width and height */
+            position: absolute;
+            width: 100%;
+            height: 120%;
+            /* to allow image to take full screen, write this */
+            top: 0;
+            left: 0;
+            /* To show content behind image */
+            z-index: -1;
+            /* to reduce image brightness and allow other content to show clearly */
+            opacity: 0.5;
+
+        }
+
+        section::after{
+            content: "This content come after section";
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar">
+                <ul class="menu-item">
+                    <li class="item">Home</li>
+                    <li class="item">About</li>
+                    <li class="item">Services</li>
+                    <li class="item">Contact Us</li>
+                </ul>
+            </nav>
+        </header>
+    
+        <section>
+            <h1>Welcome to Coding World</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aut enim repellendus nihil omnis quis, reiciendis praesentium impedit numquam placeat non nobis ducimus alias, et nesciunt exercitationem magnam quas porro expedita maiores iste culpa?</p>
+        </section>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Properties</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        img{
+            width: 64px;
+            display: block;
+            margin: auto;
+        }
+        header {
+            border: 3px solid rgb(116, 26, 189);
+            background-color: rgb(231, 109, 133);
+            margin: auto;
+            width: 1200px;
+        }
+        h3{
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: auto;
+        }
+
+        .container{
+            margin: auto;
+            width: 1200px;
+            height: 400px;
+            margin-top: 10px;
+            background-color: lightpink;
+        } 
+
+        .box{
+            border: 3px solid black;
+            background-color: gray;
+            margin: 10px 3px;
+            padding: 25px;
+            width: 32%;
+            display: inline-block;  
+            /* div is block element, so we will make it inline-block To make all the boxes inline(Bring all boxes to one line) and also play with its width as block element*/
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="top">
+        <img src="/images/Self image.jpg" alt="">
+        <h3>Welcome To Abdullah's Blog</h3>
+    </header>
+
+    <div class="container">
+        <div class="box">
+            <h4 class="heading">heading</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium exercitationem dolorum sapiente iste quia officiis, autem ex accusamus in omnis animi, labore aliquid magni vel quae praesentium! Nesciunt quia perferendis exercitationem, harum dolor debitis.</p>
+        </div>
+        <div class="box">
+            <h4 class="heading">heading</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium exercitationem dolorum sapiente iste quia officiis, autem ex accusamus in omnis animi, labore aliquid magni vel quae praesentium! Nesciunt quia perferendis exercitationem, harum dolor debitis.</p>
+        </div>
+        <div class="box">
+            <h4 class="heading">heading</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium exercitationem dolorum sapiente iste quia officiis, autem ex accusamus in omnis animi, labore aliquid magni vel quae praesentium! Nesciunt quia perferendis exercitationem, harum dolor debitis.</p>
+        </div>
+    </div>
+</body>
+</html>

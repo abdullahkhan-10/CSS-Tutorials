@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- to add media queries use this meta tag -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+
+    <!-- Resolutin                      Device
+    0-480                              smaller phone
+    481-768                            small tablet(portrait) large smart phone
+    769-1049                           large tablet(landscape) small tablet
+    1050+                              large desktop and monitors -->
+    <style>
+        .box{
+            text-align: center;
+            background-color: rgb(223, 111, 59);
+            color: white;
+            font-size: 35px;
+            /* Now, we are changing the display value to display:none; and then we will apply the media queries.  */
+            display: none;
+        }
+
+        /* It mean if this condition become true, apply the following css */
+        /* display block mean show the css of this box */
+        @media (max-width:479px){
+            #box-1{
+                display: block;
+                background-color: yellow;
+                color: black;
+            }
+        }
+
+        @media (min-width: 480px) and (max-width:768px){
+            #box-2{
+                display: block;
+                background-color: blueviolet;
+            }
+        }
+
+        @media (min-width:769px) and (max-width:1049px){
+            #box-3{
+                display: block;
+                background-color: coral;
+            }
+        }
+
+        @media (min-width:1050px){
+            #box-4{
+                display: block;
+                background-color: rgb(82, 139, 224);
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="box" id="box-1">Small Phone</div>
+    <div class="box" id="box-2">large phone</div>
+    <div class="box" id="box-3">Tablet</div>
+    <div class="box" id="box-4">Desktop</div>
+
+    
+</body>
+</html>

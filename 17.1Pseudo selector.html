@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute and nth child pseudo selectors</title>
+
+    <style>
+        input{
+            display: block;
+            margin: 5px 0px;
+        }
+
+        .container{
+            display: block;
+            width: 420px;
+            margin: auto;
+            border: 2px solid black;
+            padding: 0px 100px;
+        }
+        
+        /* Attribute selectors */
+
+        a[target]{
+            font-size: 40px;
+            color: rgb(100, 153, 51);
+        }
+
+        a[target='_self']{
+            font-size: 30px;
+            color: brown;
+        }
+
+        input[type='text']{
+            padding: 10px;
+            border: 2px solid red;
+        }
+        input[type='email']{
+            border: 2px solid blue;
+            padding: 5px;
+        }
+        
+
+        /* nth child pseudo selectors */
+
+        li:nth-child(3){
+            color: blue;
+        }
+
+        /* apply css to every second child */
+        li:nth-child(2n+0){
+            color: tomato;
+        }
+        
+        /* apply css to every third child */
+        li:nth-child(3n+3){
+            color: rgb(29, 194, 29);
+        }
+
+        /* apply css to odd child */
+        li:nth-child(odd){
+            background-color: rgb(241, 157, 157);
+        }
+
+        /* apply css to even child */
+        li:nth-child(even){
+            background-color: lightblue;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Attribute Selectors</h1>
+
+        <h1><a href="http://google.com" target="_blank">Google</a></h1>
+        <h1><a href="http://facebook.com" target="_self">Facebook</a></h1>
+
+        <form action="" class="form-control">
+            <input type="text" placeholder="Enter your name">
+            <input type="email" placeholder="Enter your email">
+            <input type="password" placeholder="Enter your password">
+            <input type="submit" value="submit">
+        </form>
+
+        <h1>nth-child Selectors</h1>
+        <ul>
+            <!-- li.item#item-$*10 -->
+            <li class="item" id="item-1">Item1</li>
+            <li class="item" id="item-2">Item2</li>
+            <li class="item" id="item-3">Item3</li>
+            <li class="item" id="item-4">Item4</li>
+            <li class="item" id="item-5">Item5</li>
+            <li class="item" id="item-6">Item6</li>
+            <li class="item" id="item-7">Item7</li>
+            <li class="item" id="item-8">Item8</li>
+            <li class="item" id="item-9">Item9</li>
+            <li class="item" id="item-10">Item10</li>
+        </ul>
+    </div>
+</body>
+</html>

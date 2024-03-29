@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+
+    <style>
+        *{
+            /* if we change the left to right padding of box , this property will stop changing its width */
+            box-sizing: border-box;
+
+            /* we set these as zero here, but later below we change them */
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: #e7a797;
+
+        }
+        .container{
+            background-color:#b597e4 ;
+            color: #664838;
+           
+
+            /* padding/margin for all the four side */
+            /* padding: 25px;
+            margin: 35px; */
+
+
+            /* same for margin */
+            /* padding-top: 20px;
+            padding-right: 30px;
+            padding-bottom: 40px;
+            padding-left: 60px; */
+            /* padding: 20px 30px 40px 60px;
+
+            margin: 40px 30px 20px 60px; */
+
+            /*padding/margin for y(top/bottom) x(left/right)*/
+            padding: 30px 35px;
+            margin: 20px 30px;
+            border-radius: 25px;
+            width: 700px;
+            border: 2px solid rgb(170, 20, 20);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae similique sit temporibus distinctio nesciunt repellendus commodi doloremque sed vel dignissimos, odit magni deleniti labore quisquam! Hic doloribus quia impedit.</p>
+    </div>
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae similique sit temporibus distinctio nesciunt repellendus commodi doloremque sed vel dignissimos, odit magni deleniti labore quisquam! Hic doloribus quia impedit.</p>
+    </div>
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae similique sit temporibus distinctio nesciunt repellendus commodi doloremque sed vel dignissimos, odit magni deleniti labore quisquam! Hic doloribus quia impedit.</p>
+    </div>
+
+</body>
+</html>

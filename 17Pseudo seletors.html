@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element and  Class Selectors</title>
+
+        <!-- Pseudo Class: it is used to define a specific state of element                     
+    hover
+    visited
+    active
+    disabled
+    focused
+    first-child
+    last-child
+    nth-child -->
+
+    <!-- Pseodo elements: used to style specific part of the element
+    first-letter
+    first-line
+    before
+    after
+    selection -->
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .container{
+            background-color: rgb(240, 154, 154);
+            border: 2px solid gray;
+            padding: 25px;
+            margin: 30px auto;
+            display: block;
+            width: 700px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            background-color: red;
+            border: 2px solid gray;
+            border-radius: 8px;
+            padding: 6px;
+
+        }
+                            /* Pseudo Classes*/
+        /* a:visited{
+            color: rgb(43, 255, 0);
+            font-size: 10px;
+
+        } */
+        a:hover{
+            color: black;
+            background-color: white;
+            border: 2px solid gray;
+            border-radius: 8px;
+            padding: 6px;
+
+        }
+        a:active{
+           background-color: rgb(64, 221, 44);
+        }
+
+        /* Pseudo Elements*/
+        p::first-letter{
+            font-size: 3rem;
+        }
+
+        p::first-line{
+            color: gray;
+        }
+
+        h1::before{
+            content: 'My ';
+        }
+        h1::after{
+            content: '*';
+            color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Tutorial</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius architecto quibusdam perspiciatis deleniti optio magnam incidunt assumenda fugiat similique cupiditate facilis dolor libero aperiam non, repudiandae expedita, facere ipsa recusandae accusantium magni nihil consequuntur! Itaque in accusantium deserunt quo placeat! Dolorem dolorum fuga id optio, officia provident vitae officiis?</p>
+        <a href="https://www.youtube.com/" target="_main">Youtube</a>
+    </div>
+</body>
+</html>

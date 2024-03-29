@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Grid and media queries</title>
+
+        <style>
+            .container{
+                display: grid;
+                grid-gap: 1rem;
+                grid-template-areas: 
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer ';
+            }
+
+            .item{
+                border: 2px solid black;
+                background-color: rgb(185, 233, 235);
+                padding: 10px 15px;
+            }
+
+            nav{
+                grid-area: navbar;
+            }
+            section{
+                grid-area: section;
+            }
+            aside{
+                grid-area: aside;
+            }
+            footer{
+                grid-area: footer;
+                text-align: center;
+            }
+
+            /* Media queries */
+            @media (max-width: 569px){
+                body{
+                    background-color: red;
+                }
+
+                .container{
+                    grid-template-areas: 
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+                }
+                span{
+                    display: block;
+                    text-align: center;
+                }
+            }
+
+            @media (min-width:570px) and (max-width:789px){
+                body{
+                    background-color: blue;
+                }
+
+                .container{
+                    grid-template-areas: 
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+                }
+
+                aside{
+                    display: none;
+                }
+
+                span{
+                    display: block;
+                    text-align: center;
+                }
+            }
+
+            @media (min-width: 790px) and (max-width: 1049px){
+                body{
+                    background-color: yellow;
+                }
+
+                .container{
+                    grid-template-areas: 
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+                }
+
+                span{
+                    text-align: center;
+                    padding: 5px 20px;
+                }
+
+            }
+
+            @media (min-width: 1050px) {
+                body {
+                    background-color: rgb(236, 152, 211);
+                }
+                span{
+                    padding: 5px 20px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <nav class="item">
+                <span>Home</span>
+                <span>About</span>
+                <span>Services</span>
+                <span>Contact us</span>
+            </nav>
+
+            <section class="item">
+            <h2>Learning CSS in urdu</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde omnis autem itaque sint tempore soluta
+                    non at, inventore accusantium mollitia ipsam nam cumque rem cum doloribus. Delectus ex optio eaque!
+                    Ab deleniti assumenda corporis nesciunt illo voluptatum qui amet quos sed laboriosam mollitia natus,
+                    debitis sint cum explicabo labore ea minus. Beatae error rerum nemo dolorum atque placeat, dolores
+                    in aliquid nisi consequuntur debitis voluptatem fugit accusantium, iusto explicabo quisquam unde
+                    facilis quos? Libero, assumenda ratione nisi aspernatur at, itaque esse quibusdam officia ipsum,
+                    aliquam consequuntur commodi error fugiat eaque possimus totam hic quia ullam praesentium placeat!
+                    Vero a autem assumenda totam doloribus illum aut repudiandae voluptatum ea, architecto minus, magnam
+                    animi fugiat nesciunt quidem sint. Voluptates ullam nesciunt quae laudantium dolor repudiandae eum
+                    praesentium, iusto sed, aspernatur quo vero voluptatibus commodi quibusdam enim nobis tenetur error
+                    libero tempore magni, fugit provident laboriosam. Necessitatibus odio voluptas corrupti natus a
+                    veniam!</p>
+            </section>
+
+            <aside class="item">
+                <h1>More about us</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptatum sed nam autem accusantium,
+                    nihil numquam iste natus nobis, veniam rem aspernatur aut voluptas officiis, totam officia
+                    blanditiis corrupti. Natus perspiciatis maiores iste magni similique, beatae quisquam? Reprehenderit
+                    explicabo officia excepturi maiores illum laudantium aliquam quas, repellat neque, rem impedit!</p>
+            </aside>
+
+                <footer class="item">Copyright abdullah khan 2023@</footer>
+        </div>
+        
+    </body>
+
+</html>

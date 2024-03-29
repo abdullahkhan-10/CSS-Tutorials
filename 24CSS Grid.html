@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Tutorial</title>
+    <style>
+        .container{
+            display: grid;
+
+            /* it gave width to each box */
+            grid-template-columns: 300px 100px 100px;
+
+            /* auto mean the box with width auto will take the whole rest space */
+            grid-template-columns: 300px 100px auto;
+
+            /* it will gave width to each box with this ratio(1:4:2) */
+            grid-template-columns: 1fr 4fr 2fr;
+
+            /* it will set 5 boxes in each row (mean 5 columns) , and auto mean, all boxes will take same width */
+            grid-template-columns: repeat(5, auto);
+           
+
+            /* it works like margin */
+            grid-gap: 2rem;
+        }
+
+        .item{
+            background-color: lightcoral;
+            margin: 3px;
+            padding: 25px 3px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- div.item{This is item-$}*10 -->
+        <div class="item">This is item-1</div>
+        <div class="item">This is item-2</div>
+        <div class="item">This is item-4</div>
+        <div class="item">This is item-5</div>
+        <div class="item">This is item-6</div>
+        <div class="item">This is item-7</div>
+        <div class="item">This is item-8</div>
+        <div class="item">This is item-9</div>
+        <div class="item">This is item-10</div>
+    </div>
+</body>
+</html>

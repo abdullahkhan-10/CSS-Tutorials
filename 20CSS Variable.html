@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable and Custome Properties</title>
+    <style>
+        
+        :root{
+            /* These are global variable and will appply to all where it is used */
+            --primary-color: green;
+            --danger-color: red;
+            --maxw: 540px;
+        }
+        
+        .box{
+            /* This is inner variable and will only apply to this class */
+            --box-color: lightblue;
+
+            /* This is from global(root) */
+            border: 3px solid var(--primary-color);
+            width: 200px;
+            height: 200px;
+            background-color: var(--box-color);
+            margin: 5px 10px;
+            box-shadow: 5px 10px var(--box-color);
+        }
+
+        .container{
+            max-width: var(--maxw);
+            margin: auto;
+            background-color: var(--danger-color);
+            padding: 15px 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+    </div>
+</body>
+</html>

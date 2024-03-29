@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position: absolute, Relative, Fixed, and Sticky</title>
+
+    <!-- CSS Position: static (default), relative, absolute, fixed, sticky  -->
+
+    <!-- All CSS Positioning Properties are: (Top,right, bottom,and left) -->
+    <style>
+        .container{
+            border: 2px solid black;
+            background-color: rgb(223, 215, 147);
+            height: 1500px;
+            
+        }
+
+        .box{
+            border: 2px solid red;
+            width: 150px;
+            height: 150px;
+            margin: 3px;
+            display: inline-block;
+           
+           
+        }
+
+    
+        #box3 {
+            /* relative: Positions the element relative to its normal positon and will leave a gap at its normal position*/
+
+            position: relative;
+            top: 34px;
+            left: 54px;
+
+            
+            /* absolute: Positions the element relative to the positon of its first parent, and not leave  the gap*/
+
+            /* position: absolute;
+            top: 30px;
+            left: 60px; */
+
+
+            /* fixed: Positions the element relative to the browser window/viewport,which means it always stay in same place even if the page is scrolled */
+
+            /* position: fixed;
+            right: 25px;
+            bottom: 10px; */
+
+
+
+            /* sticky: Positions the element relative to the users scroll position, The sticky element sticks to the top of the page (top: 0), when you reach its scroll position. */
+
+             /* position: sticky;
+            top: 25px;   */
+    }
+
+    #box5{
+        position: sticky;
+            top: 20px;
+    }
+
+    #box6{
+        position: fixed;
+            right: 25px;
+            bottom: 10px;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">Box3 is relative</div>
+        <div class="box" id="box4">4</div>
+        <div class="box" id="box5">Box5 is Sticky</div>
+        <div class="box" id="box6">Box6 is fixed</div>
+    </div>
+</body>
+</html>

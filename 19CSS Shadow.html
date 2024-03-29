@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow and Text Shadow</title>
+
+    <style>
+        .container{
+            display: flex;
+        }
+
+        /* Box Shadow */
+         .card{
+            border: 1px solid black;
+            background-color: burlywood;
+            padding: 20px 10px;
+            margin: 20px 10px;
+
+            /* box-shadow: offset-x offset-y color; */
+            box-shadow: 10px 12px blue;
+            box-shadow: -10px -12px blue;
+
+            /* box-shadow: offset-x offset-y blur-radius color; */
+            box-shadow: 7px 5px 10px blue;
+            /* box-shadow: -7px -5px 10px blue; */
+            
+            /* box-shadow: offset-x offset-y blur-radius spread-radius color; */
+            box-shadow: 7px 5px 10px 15px blue;
+
+            /* 0.5 is alpha and it control brightness */
+            box-shadow: -7px -5px 10px 15px rgb(43, 43, 197, 0.5);
+            
+            /* gave two shadow at a time */
+            /* box-shadow: 3px 5px blue, 4px 6px red; */
+        }
+
+        /* Text Shadow */
+        .card h2{
+            text-shadow: 2px 3px rgb(214, 31, 31);
+            text-shadow: 2px 3px 5px rgb(201, 18, 18);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card-1">
+            <h2>This is Python Coure</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quia ratione amet. Aliquid quasi, explicabo quam rerum molestiae laboriosam magni dolores officiis veniam id quis quidem ab, accusantium fugiat error. Sint obcaecati officiis nobis.</p>
+        </div>
+        <div class="card" id="card-2">
+            <h2>This is Java script Coure</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quia ratione amet. Aliquid quasi, explicabo quam rerum molestiae laboriosam magni dolores officiis veniam id quis quidem ab, accusantium fugiat error. Sint obcaecati officiis nobis.</p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>This is Java Coure</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quia ratione amet. Aliquid quasi, explicabo quam rerum molestiae laboriosam magni dolores officiis veniam id quis quidem ab, accusantium fugiat error. Sint obcaecati officiis nobis.</p>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

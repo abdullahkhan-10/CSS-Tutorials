@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Selector</title>
+
+        <style>
+            /* Element selector */
+            h1 {
+                color: blue;
+                background-color: rgb(214, 226, 43);
+            }
+
+            h2 {
+                color: red;
+                background-color: rgb(106, 218, 78);
+            }
+
+            h3 {
+                color: rgb(207, 41, 202);
+                background-color: rgb(60, 146, 216);
+            }
+
+            /* id selector. it has priority on class selector */
+            #div-1 {
+                color: blue;
+                font-size: 25px;
+            }
+
+            #div-2 {
+                color: red;
+                font-size: 25px;
+            }
+
+            /* class selector */
+            .container {
+                background-color: rgb(226, 226, 98);
+            }
+
+            /* universal selector */
+             /* * {
+                background-color: lightgreen;
+                font-size: 20px;
+            } */
+
+
+            /* Multiple selector / Group selectors */
+            h4,h5,h6{
+                color: rgb(223, 93, 223);
+                background-color: rgb(129, 226, 221);
+                font-size: 25px;
+                text-align: center;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Heading1</h1>
+        <h2>Heading2</h2>
+        <h3>Heading3</h3>
+        <h4>Heading4</h4>
+        <h5>Heading5</h5>
+        <h6>Heading6</h6>
+        <hr>
+
+        <div class="container">
+            <div id="div-1">
+                <p>assalam o a laikum i am abdullah khan from peshawar</p>
+                <p>Currently i am studying at the university of peshawara</p>
+            </div>
+
+            <div id="div-2">
+                <p>ok</p>
+                <p>Lets go to</p>
+                <p>University</p>
+            </div>
+            <hr>
+        </div>
+    </body>
+
+</html>
